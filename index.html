@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sabhanaz Rashid Diya</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+    <style>
+        section.content-section {
+            padding-top: 100px !important;
+        }
+
+        section.content-section h2 {
+            text-align: center;
+        }
+
+        section.content-section ul {
+            text-align: center;
+        }
+        
+        .data-graph {
+            margin-bottom: 35px;
+        }
+
+        body {
+            background: white;
+            color: black;
+        }
+
+        a {
+            color: #20ac79;
+        }
+
+        p {
+            font-size: 16px !important;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Sabhanaz Rashid Diya</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#background">Background</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#analysis">Analysis</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="heading">HOW OAKLAND POLICE IS COLLECTING YOUR SENSITIVE LOCATION DATA</h1>
+                        <a href="#background" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="background" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Background</h2>
+                <p>Police cars mounted with automatic license plate readers (ALPRs) are always winding their way through the streets of Oakland. The cameras are recording the plate numbers of vehicles in the front and behind, as well as collecting footage on the surrounding areas. The <a href="http://www2.oaklandnet.com/oakca1/groups/police/documents/webcontent/oak058612.pdf">policy</a> of the Oakland Police Department (PD) is to utilize ALPR technology to capture and store digital license plate data and images in order to track stolen vehicles, monitor hit-and-run cases and record suspicious activity. Each morning, before the patrol gets into the car, they receive a "hit list" of plate numbers that are loaded into the readers and fires off an alert if any number matches plates of vehicles on the street. In the revised policy, Oakland PD has established a retention policy of 6 months, after which records will be destroyed.</p>
+                <p>In a 2012 <a href="https://www.aclu.org/feature/you-are-being-tracked">report</a>, American Civil Liberties Union (ACLU) identified that less than 1% of the data collected using ALPR technology matched the "hit list". This poses an important question: <b>what is being done with our sensitive, private location information?</b> The technology is automated, but a retention policy of up to 6 months means public agencies like the Oakland PD can put together pieces of location information. This reveals personal information such as political or political associations that can be abused and breaches privacy laws.</p>
+                <p>The data collected for this analysis was received as a result of public records request, leading to the release of over 2.7 million readings between 2010 and 2014 on the Oakland Open Data website. Other data sources include American Fact Finder (race and income), <a href="http://mtc.ca.gov/">Metropolitan Transport Commission</a> (traffic flow) and <a href="http://www.dot.ca.gov/trafficops/census/">Caltrains</a> (traffic flow). The following visualizations should provide more insight into how plate numbers are being collected, what neighborhoods are frequented and further analysis on disparaties, such as uneven surveillance on minority groups. 
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis" class="content-section text-left">
+        <div class="analysis-section">
+            <div class="container">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Data Analysis</h2>
+                    <p>Mapping the raw data of ALPR readings over time reveals specific neighborhoods faced more surveillance than others. The heatmap provides an <b>overview of neighborhoods with repeated surveillance</b>.</p>
+
+                    <iframe class="data-graph" width="100%" height="500" frameborder="0" src="https://srdiya.carto.com/viz/5f7b604e-bd1c-11e6-a3c4-0ee66e2c9693/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                    
+                    <p>The finding gets more interesting as we gauge deeper into the data. I <b>aggregated the number of license plate readings per day</b> and plotted it against time to <b>show the trend</b>.</p>
+
+                    <iframe class="data-graph" src="p_dygraph.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+                    <p>The flat lines on the time axis showing zero readings corroborate to missing data in the released records. The data retention policy cited earlier was only recently determined by Oakland PD, until which point all the data was recorded and retained infinitely. I spoke to Mike Katz-Lacabe from the <a href="https://www.cehrp.org/about-cehrp/">Center for Human Rights and Privacy</a>, and a well-informed privacy expert from the Bay Area to understand the piece about missing data. He explained to me how the lack of a defined retention policy meant data was being stored in external hard drives and damaged. There is a possibility the Oakland PD was not able to release the records because the data is lost.</p> 
+                    
+                    <p>We can see from the timestamp graph the are tallest spikes are in August 29, 2012 and August 2, 2014. Once we dive deeper into the data, we can find out if that corresponds to an important political event, which could point to why more records were collected during certain time periods.</p>
+
+                    <p>In the second part of the analysis, I tried to find out <b>if minority groups, such as African-Americans and Hispanics are being disparately targeted</b>. This means there will be more patrol equipped with ALPR technology in neighborhoods with higher percentages of the African-Americans or Hispanics. In order to make the analysis accurate, I had to normalize total readings in a given neighborhood by population. <b>The map shows certain areas, such as Oakland Airport and downtown Oakland having a higher intensity of ALPR records</b> with proportion to the population.</p> 
+                    
+                    <iframe class="data-graph" src="intensity_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+                    <p>When compared with percentages of African-American or Hispanic population, we find <b>areas such as Oakland Airport have high concentrations of African-American population and high ALPR intensity</b>. However, it is early to draw any causal relationsip because the high intensity of readings can also be explained by the fact there are more vehicles near the airport. On the other hand, neighborhoods with high percentage of Hispanics show relatively high intensity of ALPR readings consistently, ranging between 0.4 to 7.0 units.</p> 
+                    
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                        <iframe class="data-graph" src="race_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
+                    <div class="col-xs-6 col-sm-5">
+                        <iframe class="data-graph" src="race_map2.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                        </iframe>
+
+                    </div>
+
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                    <p>In order to draw a statistically significant relationship, I plotted the intensity of ALPR readings against the percentage of Hispanics and African-Americans in the population. Contrary to what the maps showed, <b>the graphs did not reveal any significant correlation</b>.</p>
+
+                        <img class="data-graph" src="Hispanic2.jpeg" class="rounded float-xs-left" alt="Responsive image">
+                        <img class="data-graph" src="Black2.jpeg" class="rounded float-xs-right" alt="Responsive image">
+                </div>  
+                    
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                    <p>A similar comparison can be drawn between the intensity of ALPR readings and household income. <b>Temescal and Oakland Airport are both low-income areas with two of the highest brackets in ALPR intensity. In San Leandro, Castro Valley and Lakeshore, where 12-18 percent of households have an annual income of over $200,000 have lower intensity of ALPR records</b>. Cyrus Favrier, senior business editor at Ars Technica resonates my finding in his <a href="http://arstechnica.com/tech-policy/2015/03/we-know-where-youve-been-ars-acquires-4-6m-license-plate-scans-from-the-cops/">investigative report</a> from March 2015. He refers to over 4.6 million records collected between the same time frame as mine where patrol cars mounted with ALPRs were seen more frequently in low-income neighborhoods.</p>.  
+                     
+                    <iframe class="data-graph" src="income_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                        </iframe>
+
+                    <p> Although the data reveals several intriguing insights, several missing data made it difficult to draw significant and statistically accurate causal relationships. What is certain is that our private location data is being collected routinely and retained for a substantial period. This poses a threat to Americans' First Amendment rights. It is also clear police patrol is more common in low-income neighborhoods. This can occur because low-income neighborhoods are assumed to experience a higher crime rate, and "proving" this will only further confirm the hypothesis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Contact</h2>
+                <p>This project was done as part of Data Visualization, a graduate level course offered at UC Berkeley's School of Journalism. The project would not have been possible without the direction and support of the course faculty, Peter Aldhous.</p>
+                <p>To know more about the project or provide feedback, please <a href="mailto:srdiya@berkeley.edu">email me</a>.</p>
+                
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/diya880" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/srdiya/Oakland-ALPR" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/srdiya" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Diya 2016</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
