@@ -121,7 +121,7 @@
                 <h2>Background</h2>
                 <p>Police cars mounted with automatic license plate readers (ALPRs) are always winding their way through the streets of Oakland. The cameras are recording the plate numbers of vehicles in the front and behind, as well as collecting footage on the surrounding areas. The <a href="http://www2.oaklandnet.com/oakca1/groups/police/documents/webcontent/oak058612.pdf">policy</a> of the Oakland Police Department (PD) is to utilize ALPR technology to capture and store digital license plate data and images in order to track stolen vehicles, monitor hit-and-run cases and record suspicious activity. Each morning, before the patrol gets into the car, they receive a "hit list" of plate numbers that are loaded into the readers and fires off an alert if any number matches plates of vehicles on the street. In the revised policy, Oakland PD has established a retention policy of 6 months, after which records will be destroyed.</p>
                 <p>In a 2012 <a href="https://www.aclu.org/feature/you-are-being-tracked">report</a>, American Civil Liberties Union (ACLU) identified that less than 1% of the data collected using ALPR technology matched the "hit list". This poses an important question: <b>what is being done with our sensitive, private location information?</b> The technology is automated, but a retention policy of up to 6 months means public agencies like the Oakland PD can put together pieces of location information. This reveals personal information such as political or political associations that can be abused and breaches privacy laws.</p>
-                <p>The data collected for this analysis was received as a result of public records request, leading to the release of over 2.7 million readings between 2010 and 2014 on the Oakland Open Data website. Other data sources include American Fact Finder (race and income), <a href="http://mtc.ca.gov/">Metropolitan Transport Commission</a> (traffic flow) and <a href="http://www.dot.ca.gov/trafficops/census/">Caltrains</a> (traffic flow). The following visualizations should provide more insight into how plate numbers are being collected, what neighborhoods are frequented and further analysis on disparaties, such as uneven surveillance on minority groups. 
+                <p>The data collected for this analysis was received as a result of public records request, leading to the release of over 2.7 million readings between 2010 and 2014 on the Oakland Open Data website. Additional data sources include American Fact Finder (race and income). The following visualizations should provide more insight into how plate numbers are being collected, what neighborhoods are frequented and further analysis on disparaties, such as uneven surveillance on minority groups. 
             </div>
         </div>
     </section>
@@ -132,7 +132,7 @@
             <div class="container">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>Data Analysis</h2>
-                    <p>Mapping the raw data of ALPR readings over time reveals specific neighborhoods faced more surveillance than others. The heatmap provides an <b>overview of neighborhoods with repeated surveillance</b>.</p>
+                    <p>Mapping the <b>raw data</b> of ALPR readings over time reveals specific neighborhoods encountered more surveillance than others, as seen in the image below. The heatmap provides an <b>overview of neighborhoods with repeated surveillance</b> by plotting the raw readings against time (between 2010 and 2014) and number of records collected monthly.</p>
 
                     <iframe class="data-graph" width="100%" height="500" frameborder="0" src="https://srdiya.carto.com/viz/5f7b604e-bd1c-11e6-a3c4-0ee66e2c9693/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                     
@@ -140,20 +140,38 @@
 
                     <iframe class="data-graph" src="p_dygraph.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 
-                    <p>The flat lines on the time axis showing zero readings corroborate to missing data in the released records. The data retention policy cited earlier was only recently determined by Oakland PD, until which point all the data was recorded and retained infinitely. I spoke to Mike Katz-Lacabe from the <a href="https://www.cehrp.org/about-cehrp/">Center for Human Rights and Privacy</a>, and a well-informed privacy expert from the Bay Area to understand the piece about missing data. He explained to me how the lack of a defined retention policy meant data was being stored in external hard drives and damaged. There is a possibility the Oakland PD was not able to release the records because the data is lost.</p> 
+                    <p>The flat lines on the time axis showing zero readings corroborate to missing data in the released records. The data retention policy cited earlier was only recently determined by Oakland PD, until which point all the data was recorded and retained infinitely. I spoke to Mike Katz-Lacabe from the <a href="https://www.cehrp.org/about-cehrp/">Center for Human Rights and Privacy</a>, and a well-informed privacy expert from the Bay Area to understand the piece about missing data. He explained to me how the lack of a defined retention policy meant data was being stored in external hard drives and damaged. There is a possibility that Oakland PD was not able to release the records because the data is lost.</p> 
                     
                     <p>We can see from the timestamp graph the are tallest spikes are in August 29, 2012 and August 2, 2014. Once we dive deeper into the data, we can find out if that corresponds to an important political event, which could point to why more records were collected during certain time periods.</p>
 
-                    <p>In the second part of the analysis, I tried to find out <b>if minority groups, such as African-Americans and Hispanics are being disparately targeted</b>. This means there will be more patrol equipped with ALPR technology in neighborhoods with higher percentages of the African-Americans or Hispanics. In order to make the analysis accurate, I had to normalize total readings in a given neighborhood by population. <b>The map shows certain areas, such as Oakland Airport and downtown Oakland having a higher intensity of ALPR records</b> with proportion to the population.</p> 
-                    
                     <iframe class="data-graph" src="intensity_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 
-                    <p>When compared with percentages of African-American or Hispanic population, we find <b>areas such as Oakland Airport have high concentrations of African-American population and high ALPR intensity</b>. However, it is early to draw any causal relationsip because the high intensity of readings can also be explained by the fact there are more vehicles near the airport. On the other hand, neighborhoods with high percentage of Hispanics show relatively high intensity of ALPR readings consistently, ranging between 0.4 to 7.0 units.</p> 
+                    <p>In the second part of the analysis, I tried to find out <b>if minority groups, such as African-Americans and Hispanics are being disparately targeted</b>. This means there will be more patrol equipped with ALPR technology in neighborhoods with higher percentages of the African-Americans or Hispanics. In order to make the analysis accurate, I normalized total readings in a given neighborhood by population. This becomes tricky because neighborhoods near Oakland Airport for example, will have a lower population and a high number of records owing to the fact that surveillance technology is historically more prevalent near and inside airports. This makes the processed data slightly inflated and not necessarily always useful in making calculated assumptions about what is actually happening. The data nevertheless should not be entirely discounted. <b>The map shows areas like Downtown Oakland having a higher intensity of ALPR records</b> which is accurate given it is a central location.</p> 
+                    
+                    
+
+                    
                     
                 </div>
                 <div class="row">
                     <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                        <iframe class="data-graph" src="intensity_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
+                    <div class="col-xs-6 col-sm-5">
                         <iframe class="data-graph" src="race_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                        </iframe>
+
+                    </div>
+
+                <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <p>To understand the implication of surveillance technologies such as ALPR, we dived deeper into the data and mapped records on two minority groups, Hispanics and African-Americans. When compared with percentages of African-American or Hispanic population, we find <b>areas such as Oakland Airport have high concentrations of African-American population and high ALPR intensity</b>. Deriving any positive correlation between readings and concentration of racial groups can throw us off; the intensity of ALPR is misleading. In addition to more surveillance technology, the high intensity of readings near airports can be explained by the fact there are more vehicles near the airport. On the other hand, neighborhoods with high percentage of Hispanics show relatively high intensity of ALPR readings consistently, ranging between 0.4 to 7.0 units.</p> 
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                        <iframe class="data-graph" src="intensity_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
                         </iframe>
                     </div>
                     <div class="col-xs-6 col-sm-5">
@@ -161,6 +179,7 @@
                         </iframe>
 
                     </div>
+
 
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
@@ -175,7 +194,7 @@
                     <p>A similar comparison can be drawn between the intensity of ALPR readings and household income. <b>Temescal and Oakland Airport are both low-income areas with two of the highest brackets in ALPR intensity. In San Leandro, Castro Valley and Lakeshore, where 12-18 percent of households have an annual income of over $200,000 have lower intensity of ALPR records</b>. Cyrus Favrier, senior business editor at Ars Technica resonates my finding in his <a href="http://arstechnica.com/tech-policy/2015/03/we-know-where-youve-been-ars-acquires-4-6m-license-plate-scans-from-the-cops/">investigative report</a> from March 2015. He refers to over 4.6 million records collected between the same time frame as mine where patrol cars mounted with ALPRs were seen more frequently in low-income neighborhoods.</p>.  
                      
                     <iframe class="data-graph" src="income_map.html" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
-                        </iframe>
+                    </iframe>
 
                     <p> Although the data reveals several intriguing insights, several missing data made it difficult to draw significant and statistically accurate causal relationships. What is certain is that our private location data is being collected routinely and retained for a substantial period. This poses a threat to Americans' First Amendment rights. It is also clear police patrol is more common in low-income neighborhoods. This can occur because low-income neighborhoods are assumed to experience a higher crime rate, and "proving" this will only further confirm the hypothesis.</p>
                     </div>
@@ -208,8 +227,7 @@
     </section>
 
     <!-- Map Section -->
-    <div id="map"></div>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container text-center">
